@@ -2,7 +2,7 @@
 
 bitKrush，2026 年 11 月 21 日发布。B 站标注“含 AI 生成内容”。[原视频](https://www.bilibili.com/video/BV1nHy8z1EGJ/)
 
-**整理方法**　以本地音轨的离线识别稿为底本，保留全部 35 段。时间显示到百分之一秒，点区间可从起点所在的整秒回看。逐段整理口播，借画面字幕辨认同音词、公式和代码名。第一人称及“如果”等判断沿用讲者口吻，方括号与引文框为校注。Alpöge 的说明可对照从重数到 Theta 提升的思路。Rubinstein 的第二版工作稿详述 ζ 函数的情形，并在第 I.12 节列出仍待写出的常规数学论证。[作者说明，第 1、3–4 页](https://alpo.ge/remark.pdf) · [Rubinstein 工作稿及版本说明](https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/)
+**整理方法**　以本地音轨的离线识别稿为底本，保留全部 35 段。时间显示到百分之一秒，点区间可从起点所在的整秒回看。逐段整理口播，借画面字幕辨认同音词、公式和代码名。第一人称及“如果”等判断沿用讲者口吻，〔〕中的说明和下方的校注框为整理者所加。Alpöge 的说明可对照从重数到 Theta 提升的思路。Rubinstein 的第二版工作稿详述 ζ 函数的情形，并在第 I.12 节列出仍待写出的常规数学论证。[作者说明，第 1、3–4 页](https://alpo.ge/remark.pdf) · [Rubinstein 工作稿及版本说明](https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/)
 
 ## 阅读地图
 
@@ -42,7 +42,7 @@ bitKrush，2026 年 11 月 21 日发布。B 站标注“含 AI 生成内容”�
 
 [03:46.84–04:04.00](https://www.bilibili.com/video/BV1nHy8z1EGJ/?t=226)　令 $\theta$ 逼近 $1/2$，所有本原特征在右半平面的零点就全部被消灭了。问题变成，到底用什么办法才能压住加权素数和 $G_m(y)$ 的上界？灵感来自 1969 年斯捷潘诺夫（Stepanov）证明有限域上黎曼猜想的方法。
 
-> 校注　对 ζ 函数，Rubinstein 写出的误差还含线性修正项，$G(y)=\sum_{n\le y}\Lambda(n)(y/n-1)-y\log y+(1+\gamma)y$。图里要排除的是 $\beta>\theta$ 的零点。讲稿用 $y^\theta-G(y)$ 在充分大处的非负性应用朗道定理。[Rubinstein，第 I.1 节](https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/zeta-paper_v2.pdf#page=5)
+> 校注　对 ζ 函数，Rubinstein 写出的误差还含线性修正项，$G(y)=\sum_{n\le y}\Lambda(n)(y/n-1)-y\log y+(1+\gamma)y$。画面上的 $G_m(y)$ 还加上非平凡特征所对应的加权项。图里要排除的是 $\beta>\theta$ 的零点。讲稿用 $y^\theta-G(y)$ 在充分大处的非负性应用朗道定理。[Rubinstein，第 I.1 节](https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/zeta-paper_v2.pdf#page=5)
 
 [04:04.00–04:26.58](https://www.bilibili.com/video/BV1nHy8z1EGJ/?t=244)　方法出奇简单。先利用基础线性代数，寻找一个不恒为零的辅助多项式 $P(X)$。只要未知系数的个数 $D+1$ 严格大于零点方程的个数 $N\times M$，齐次方程必有非零解。要求它在每一个我们想统计的有理点处，都与坐标轴高阶相切，具备重数 $M$。因为非零多项式的零点总重数不能超过次数 $D$，
 
@@ -57,6 +57,8 @@ bitKrush，2026 年 11 月 21 日发布。B 站标注“含 AI 生成内容”�
 [05:44.90–06:05.78](https://www.bilibili.com/video/BV1nHy8z1EGJ/?t=344)　于是作者把提升过程首尾相连，反复迭代。对长度为 $X$ 的素数和，大约迭代 $\sqrt X$ 次，每次都在目标素数处叠上一层整除增益。在代码库最底层，酉群 Theta 提升（画面标作 `TLiftK`）直接驱动了核心定理 `Row0b`。所谓 CM 域，就像加上虚数单位的数域 $\mathbb Q(i)$，
 
 [06:05.78–06:24.36](https://www.bilibili.com/video/BV1nHy8z1EGJ/?t=365)　自带自然的复共轭对称。`Row0b` 把对称空间里的驻波翻译成控制素数分裂规律的伽罗瓦表示。有了迭代 Theta 提升造出的“重数”，下一步我们需要“多项式次数”的替代品。现在来看替代多项式次数的几何武器。
+
+> 校注　片中画出了从 `TLiftK` 到 `Row0b` 的箭头。Rubinstein 核到了 `Row0b` 的陈述及其在 `VWin` 论证中的位置。讲者所说两者间的直接依赖关系未能独立核实。[Rubinstein，第 III.9 节](https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/zeta-paper_v2.pdf#page=157)
 
 [06:24.36–06:40.92](https://www.bilibili.com/video/BV1nHy8z1EGJ/?t=384)　理解 Arakelov 几何最直观的画面，就是平面上整齐排列的整数格。格点张出的基本平行四边形的面积叫做余体积。余体积越小，格点越密集。关键桥梁来了。在数论里，如果一组数被某个素数高次整除，
 
@@ -90,6 +92,6 @@ bitKrush，2026 年 11 月 21 日发布。B 站标注“含 AI 生成内容”�
 
 [10:19.22–10:36.16](https://www.bilibili.com/video/BV1nHy8z1EGJ/?t=619)　在 `Main.lean` 汇成两行导出定理。如果这份形式化证明通过数学界最终编译核验，无数条件定理将自动成真。素数计数达到理论最优精度，素性测试变确定算法，西格尔零点也会彻底消失。同时也要保持清醒。
 
-> 校注　“两行”指画面选出的两条结论。Rubinstein 的核验记录列出入口文件中的五条定理，并确认其只依赖 Lean 的三条标准公理。[入口定理与公理核验记录](https://mrubinst.github.io/grh-lean-verification/)
+> 校注　总结图把结论写成 RH 和狄利克雷 GRH 两项。“素性测试”在口播中未指明具体算法。Rubinstein 的核验记录列出入口文件中的五条定理，并确认其只依赖 Lean 的三条标准公理。[入口定理与公理核验记录](https://mrubinst.github.io/grh-lean-verification/)
 
 [10:36.16–10:56.34](https://www.bilibili.com/video/BV1nHy8z1EGJ/?t=636)　它不会直接攻破 RSA 密码，也不能自动推出孪生素数。从一维数轴上的素数孤岛，到高斯核、整数格斜率，再到自动形式化检验，这条横跨数域与几何的证明之路，正展现了现代数学跨越门类、浑然一体的深邃之美。谢谢观看，下个故事再见。
