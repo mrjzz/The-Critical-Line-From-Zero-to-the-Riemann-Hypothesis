@@ -2,6 +2,8 @@
 
 按作者字幕库的简体中文社区 SRT 合并为短段落，保留字幕用词。数学叙述与问题状态反映视频制作当年。时间码指向原视频。[原片](https://www.youtube.com/watch?v=sD0NjbwqlYw) · [社区字幕源文件](https://github.com/3b1b/captions/blob/main/2016/zeta/chinese/china_community.srt) · [逐条时间码](3Blue1Brown-zeta.zh.srt)
 
+3Blue1Brown 在 B 站发布的官方双语版署名翻译为 Solara570、rjdimo。原片和 B 站版在下面三个讲解点对得上，可边看中文画面边读本稿。[B 站双语版](https://www.bilibili.com/video/BV1tx411y7VG/) · [07:49 网格变换](https://www.bilibili.com/video/BV1tx411y7VG/?t=469) · [16:09 解析延拓](https://www.bilibili.com/video/BV1tx411y7VG/?t=969) · [18:19 临界线](https://www.bilibili.com/video/BV1tx411y7VG/?t=1099)
+
 ## 为什么要引入 ζ 函数
 
 [00:04](https://youtu.be/sD0NjbwqlYw?t=4)　黎曼ζ函数 你们大部分人可能对这个现代数学概念有所耳闻 但是难以理解它 别担心  很快我就会解释你刚才看到的动画 不少人知道这个函数 是因为求出其零点的人能够获得一百万美元的奖励 这一悬而未解的问题就是"黎曼猜想" 有人可能是从发散级数1+2+3+4+...听说的
